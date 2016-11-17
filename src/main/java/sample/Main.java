@@ -28,12 +28,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        try {
-            JSONObject json = new JSONObject(IOUtils.toString(new URL("http://api.apixu.com/v1/current.json?key=1b6096b375b64c4786e150301161711&q=Warsaw"), Charset.forName("UTF-8")));
-            System.out.println(json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
     }
 }
