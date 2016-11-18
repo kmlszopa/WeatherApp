@@ -1,28 +1,26 @@
 package sample.model;
 
 
-
-import java.time.LocalDateTime;
-
 /**
  * Created by kmlsz on 17.11.2016.
  */
 public class Weather {
 
     private double temperature;
-    private LocalDateTime lastUpdated;
+    private String lastUpdated;
     private double feelsLike;
-    private String iconURL;
     private boolean isDay;
     private double preasure;
     private String location;
     private Condition condition;
 
-    public Weather(double temperature, LocalDateTime lastUpdated, double feelsLike, String iconURL, boolean isDay, double preasure, String location) {
+    public Weather() {
+    }
+
+    public Weather(double temperature, String lastUpdated, double feelsLike, String iconURL, boolean isDay, double preasure, String location) {
         this.temperature = temperature;
         this.lastUpdated = lastUpdated;
         this.feelsLike = feelsLike;
-        this.iconURL = iconURL;
         this.isDay = isDay;
         this.preasure = preasure;
         this.location = location;
@@ -46,11 +44,11 @@ public class Weather {
         this.temperature = temperature;
     }
 
-    public LocalDateTime getLastUpdated() {
+    public String getLastUpdated() {
         return lastUpdated;
     }
 
-    public void setLastUpdated(LocalDateTime lastUpdated) {
+    public void setLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
 
@@ -62,13 +60,6 @@ public class Weather {
         this.feelsLike = feelsLike;
     }
 
-    public String getIconURL() {
-        return iconURL;
-    }
-
-    public void setIconURL(String iconURL) {
-        this.iconURL = iconURL;
-    }
 
     public boolean isDay() {
         return isDay;
@@ -92,5 +83,18 @@ public class Weather {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "Weather{" +
+                "temperature=" + temperature +
+                ", lastUpdated='" + lastUpdated + '\'' +
+                ", feelsLike=" + feelsLike +
+                ", isDay=" + isDay +
+                ", preasure=" + preasure +
+                ", location='" + location + '\'' +
+                ", condition=" + condition +
+                '}';
     }
 }

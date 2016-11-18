@@ -52,4 +52,12 @@ public class Condition {
 
     private int code;
 
+    @Override
+    public String toString() {
+        return "Condition{" +
+                "text='" + text + '\'' +
+                ", iconUrl='" + iconUrl + '\'' +
+                ", code=" + code +
+                '}';
+    }
 }
