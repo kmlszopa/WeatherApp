@@ -56,9 +56,5 @@ public class WeatherServiceJsonOrg implements WeatherService {
         return weather;
     }
 
-    public static void main(String[] args) {
-        WeatherServiceJsonOrg weatherServiceJsonOrg = new WeatherServiceJsonOrg("1b6096b375b64c4786e150301161711");
-        Weather weather =  weatherServiceJsonOrg.getWeatherFromUrl("http://api.apixu.com/v1/current.json","Warsaw");
-        System.out.println(weather);
-    }
+
 }
